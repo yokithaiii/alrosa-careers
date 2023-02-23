@@ -1,0 +1,22 @@
+header.dev-header {
+    height: 104px;
+    background-color: #949494;
+    padding: 24px 0;
+}
+.l-wrapper {
+    max-width: 1440px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 140px;
+}
+.dev-header--content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.dev-breadcrumbs {
+    padding: 36px 0;
+    background-color: #FFFFFF;
+}

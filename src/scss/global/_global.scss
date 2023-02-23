@@ -2,8 +2,11 @@
 *::before,
 *::after {
 	box-sizing: border-box;
+	font-family: Avenir;
+	font-style: normal;
+	font-weight: 400;
+	color: #000000;
 }
-
 .flex {
 	display: flex;
 	align-items: flex-start;
@@ -63,4 +66,8 @@ h4,
 h5,
 h6 {
 	margin: 0;
+}
+
+main {
+	background-color: #91E0FF;
 }

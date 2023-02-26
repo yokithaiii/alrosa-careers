@@ -10,3 +10,4 @@ function openFadeDetail1(el) {
     btnTarget.parentElement.classList.toggle("l-active");
     btnTarget.parentElement.children[1].classList.toggle("l-active");
 }
+

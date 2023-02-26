@@ -7,7 +7,8 @@
     }
 }
 .l-careers__main {
-    margin-top: 27px;
+    // margin-top: 27px;
+    margin-top: 18px;
 }
 .l-careers__main--container {
 
@@ -15,8 +16,10 @@
 .l-careers--df {
     display: flex;
     align-items: flex-end;
+    justify-content: space-between;
 }
 .l-careers__main--left {
+    max-width: 66%;
 }
 .l-main__title {
     h3 {
@@ -41,34 +44,249 @@
 .l-careers__main--img {
 }
 
-.warning-line {
-    margin: 84px 0;
+.l-careers__redline {
+    
 }
-.warning-line--container {
+.l-redline--container {
     padding: 20px 0;
     background: #FF0000;
     display: flex;
     overflow: hidden;
-    div {
-        animation-direction: reverse;
-        animation-duration: 5s;
-        animation-name: move;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
+    span {
         white-space: nowrap;
-        font-weight: 450;
+        font-weight: 400;
         font-size: 32px;
         line-height: 48px;
         text-transform: uppercase;
         color: #FFFFFF;
         margin-right: 39px;
     }
+    div {
+        display: flex;
+        animation-direction: reverse;
+        animation-duration: 10s;
+        animation-name: redlineMove;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
 }
-@keyframes move {
+@keyframes redlineMove {
 	from {
 		transform: translateX(-100%);
 	}
 	to {
 		transform: translateX(0);
 	}
+}
+
+section.l-careers__practice {
+    position: relative;
+    .l-main__title {
+        h3 {
+            line-height: 52px;
+            letter-spacing: 0.05em;
+        }
+    }
+    .l-practice--gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .l-gallery--item {
+        max-width: 380px;
+        max-height: 250px;
+    }
+    .l-triangle {
+        position: absolute;
+        right: 0;
+        bottom: -200px;
+        width: 316px;
+        height: 797px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+        background: linear-gradient(271.85deg, #FFFFFF -39.42%, rgba(255, 255, 255, 0) 127.21%);
+    }
+    .l-triangle--border {
+        position: relative;
+        width: 275px;
+        height: 743px;
+        clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+        background: #FF0000;
+        span {
+            position: absolute;
+            top: 430px;
+            right: -90px;
+            z-index: 100;
+            font-weight: 600;
+            font-size: 41.0944px;
+            line-height: 42px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            transform: rotate(-70.17deg);
+        }
+    }
+}
+
+.l-practice--gallery {
+    margin-top: 58px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.l-gallery--item {
+    position: relative;
+    margin-right: 20px;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: relative;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        width: 100%;
+        height: 100%;
+        background-color: #FF0000;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.l-practice--description {
+    margin-top: 36px;
+    max-width: 66%;
+    span {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        color: #000000;
+    }
+}
+.l-practice__descritption--contacts {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 20px;
+    i {
+        width: 36px;
+        height: 30px;
+        background-repeat: no-repeat;
+    }
+    a {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+    }
+}
+.l-careers--accordion {
+    margin-top: 28px;
+    overflow: hidden;
+}
+.l-careers__accordion--container {
+    .l-careers__accordion--btn i {
+        transform: rotate(180deg);
+    }
+}
+.l-careers__accordion--container.l-active {
+    .l-careers__accordion--btn i {
+        transform: rotate(0deg);
+    }
+}
+
+
+.l-careers__accordion--btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    font-weight: 450;
+    font-size: 22px;
+    line-height: 24px;
+    text-decoration: none;
+    border-bottom: 2px solid #000000;
+    filter: drop-shadow(0px 0px 16px rgba(129, 140, 153, 0.16));
+    i {
+        width: 14px;
+        height: 8px;
+        background-repeat: no-repeat;
+        margin-right: 6px;
+        transition: .2s;
+    }
+}
+.l-careers__accordion--content {
+    // display: none;
+    max-height: 0;
+    height: 100%;
+    transition: max-height 0.3s ease-out;
+    padding: 0 0 0 35px;
+    overflow: hidden;
+    li {
+        padding: 16px 0;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+.l-careers__accordion--content.l-active {
+    display: block;
+    max-height: 500px;
+    height: auto;
+    overflow: visible;
+    transition: max-height 0.3s ease-in;
+}
+.l-accordion_form--send {
+    display: flex;
+    margin-top: 24px;
+    a {
+        max-width: 200px;
+        width: 100%;
+        padding: 10px 0;
+        background: #FF0000;
+        border-radius: 42px;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        text-decoration: none;
+        color: #FFFFFF;
+        text-align: center;
+        transition: .3s;
+      
+    }
+}
+
+section.l-careers__grants {
+    .l-gallery--item {
+        max-width: 570px;
+        max-height: 387px;
+    }
+    .l-practice--gallery {
+        padding-bottom: 40px;
+    }
+    .l-gallery--item:first-child:before {
+        left: -10px;
+        bottom: 10px;
+    }
+    .l-gallery--item:last-child:before {
+        left: 10px;
+        top: 10px;
+    }
+}
+
+section.l-careers__internship {
+    .l-practice--gallery {
+        padding-bottom: 40px;
+    }
+    .l-gallery--item:first-child:before {
+        left: -10px;
+        top: 10px;
+    }
+    .l-gallery--item:last-child:before {
+        left: 10px;
+        bottom: 10px;
+    }
+    
 }

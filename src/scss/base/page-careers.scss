@@ -6,13 +6,11 @@
         object-fit: cover;
     }
 }
+
 .l-careers__main {
-    // margin-top: 27px;
     margin-top: 18px;
 }
-.l-careers__main--container {
 
-}
 .l-careers--df {
     display: flex;
     align-items: flex-end;
@@ -21,6 +19,7 @@
 .l-careers__main--left {
     max-width: 66%;
 }
+
 .l-main__title {
     h3 {
         font-weight: 750;
@@ -30,26 +29,20 @@
         text-transform: uppercase;
     }
 }
+
 .l-main__subtitle {
     margin-top: 48px;
-    span { 
+    span {
         font-weight: 600;
         font-size: 18px;
         line-height: 27px;
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
 }
-.l-careers__main--right {
-}
-.l-careers__main--img {
-}
 
-.l-careers__redline {
-    
-}
 .l-redline--container {
     padding: 20px 0;
-    background: #FF0000;
+    background: #ff0000;
     display: flex;
     overflow: hidden;
     span {
@@ -58,7 +51,7 @@
         font-size: 32px;
         line-height: 48px;
         text-transform: uppercase;
-        color: #FFFFFF;
+        color: #ffffff;
         margin-right: 39px;
     }
     div {
@@ -70,13 +63,14 @@
         animation-timing-function: linear;
     }
 }
+
 @keyframes redlineMove {
-	from {
-		transform: translateX(-100%);
-	}
-	to {
-		transform: translateX(0);
-	}
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
 section.l-careers__practice {
@@ -104,14 +98,14 @@ section.l-careers__practice {
         justify-content: flex-end;
         align-items: flex-end;
         clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-        background: linear-gradient(271.85deg, #FFFFFF -39.42%, rgba(255, 255, 255, 0) 127.21%);
+        background: linear-gradient(271.85deg, #ffffff -39.42%, rgba(255, 255, 255, 0) 127.21%);
     }
     .l-triangle--border {
         position: relative;
         width: 275px;
         height: 743px;
         clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-        background: #FF0000;
+        background: #ff0000;
         span {
             position: absolute;
             top: 430px;
@@ -122,7 +116,7 @@ section.l-careers__practice {
             line-height: 42px;
             letter-spacing: 0.05em;
             text-transform: uppercase;
-            color: #FFFFFF;
+            color: #ffffff;
             transform: rotate(-70.17deg);
         }
     }
@@ -133,6 +127,7 @@ section.l-careers__practice {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
 .l-gallery--item {
     position: relative;
     margin-right: 20px;
@@ -143,18 +138,19 @@ section.l-careers__practice {
         position: relative;
     }
     &::before {
-        content: '';
+        content: "";
         position: absolute;
         bottom: 10px;
         left: 10px;
         width: 100%;
         height: 100%;
-        background-color: #FF0000;
+        background-color: #ff0000;
     }
     &:last-child {
         margin-right: 0;
     }
 }
+
 .l-practice--description {
     margin-top: 36px;
     max-width: 66%;
@@ -197,7 +193,6 @@ section.l-careers__practice {
     }
 }
 
-
 .l-careers__accordion--btn {
     display: flex;
     align-items: center;
@@ -214,7 +209,7 @@ section.l-careers__practice {
         height: 8px;
         background-repeat: no-repeat;
         margin-right: 6px;
-        transition: .2s;
+        transition: 0.2s;
     }
 }
 .l-careers__accordion--content {
@@ -245,16 +240,15 @@ section.l-careers__practice {
         max-width: 200px;
         width: 100%;
         padding: 10px 0;
-        background: #FF0000;
+        background: #ff0000;
         border-radius: 42px;
         font-weight: 400;
         font-size: 15px;
         line-height: 20px;
         text-decoration: none;
-        color: #FFFFFF;
+        color: #ffffff;
         text-align: center;
-        transition: .3s;
-      
+        transition: 0.3s;
     }
 }
 
@@ -288,5 +282,153 @@ section.l-careers__internship {
         left: 10px;
         bottom: 10px;
     }
+}
+
+@media screen and (max-width: 1024px) {
+    .l-main__title h3 {
+        font-size: 50px;
+        line-height: 55px;
+    }
+    .l-triangle {
+        display: none!important;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .l-main__title h3 {
+        font-size: 36px;
+        line-height: 44px;
+    }
+    .l-main__subtitle {
+        margin-top: 35px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .l-careers__main {
+        position: relative;
+        margin-top: 40px;
+    }
+    .l-careers__main--left {
+        max-width: 100%;
+        position: relative;
+        z-index: 2;
+    }
+    .l-careers__main--right {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .l-careers__main--img {
+        max-width: 250px;
+        max-height: 250px;
+        img {
+            width: 100%;
+        }
+    }
+    .l-redline--container {
+        padding: 10px 0;
+        span {
+            font-size: 24px;
+        }
+    }
+    .l-practice--description {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .l-careers__students {
+        padding-top: 40px;
+        position: relative;
+    }
+    .l-careers__banner {
+        height: 274px;
+    }
+    .l-careers__main {
+        margin-top: 0;
+    }
+    .l-careers__main--left {
+        max-width: 100%;
+    }
+    .l-main__title h3 {
+        font-weight: 600;
+        letter-spacing: normal;
+    }
+    .l-careers__main--right {
+        position: absolute;
+        top: 9px;
+        right: 0;
+        width: 92px;
+        height: 88px;
+        img {
+            width: 100%;
+        }
+    }
+    .l-main__subtitle {
+        margin-top: 40px;
+        span {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 27px;
+            text-shadow: none;
+        }
+    }
+
+    .l-redline--container {
+        padding: 10px 0;
+        span {
+            font-size: 18px;
+            line-height: 48px;
+            margin-right: 24px;
+        }
+    }
+
+    section.l-careers__practice .l-gallery--item {
+        max-height: 380px;
+        max-width: 100%;
+    }
     
+    .l-practice--gallery {
+        margin-top: 35px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .l-gallery--item {
+        margin-right: 0;
+    }
+    .l-practice--description {
+        margin-top: 30px;
+        span {
+            font-size: 16px;
+            line-height: 27px;
+        }
+    }
+    .l-practice__descritption--contacts {
+        margin-top: 20px;
+    }
+    .l-careers__accordion--btn {
+        font-size: 18px;
+        line-height: 24px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #000000;
+    }
+    .l-careers__accordion--content {
+        margin-top: 12px;
+        li {
+            padding: 14px 0;
+            font-size: 16px;
+            line-height: 28px;
+        }
+    }
+}
+@media screen and (max-width: 325px) {
+    .l-careers__main--left {
+        position: relative;
+        z-index: 2;
+    }
+    .l-main__title h3 {
+        font-size: 34px;
+    }
 }

@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ИСТОРИИ УСПЕХА</title>
-  <link rel="stylesheet" href="./css/style.min.css">
-  <link rel="stylesheet" href="./css/icons.css">
-  <link rel="stylesheet" href="./css/default.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/default.css">
 </head>
 
 <body>
-  <main>
+  <main class="js-tab__parent-hero">
     <section class="l-breadcrumbs__section">
       <div class="l-wrapper">
         <ul class="l-breadcrumbs">
@@ -36,11 +36,18 @@
         </div>
         <div class="l-group-grid">
           <article class="l-item">
-            <img src="./img/face.png" alt="">
-            <h1>Павел Рудминас</h1>
+            <img src="img/face.png" alt="">
+            <h1>Павел Рудминас #1</h1>
             <p>От помощника машиниста буровой установки до руководителя производственно-технического отдела буровой
               компании</p>
-            <a href="#" class="l-link__sl">Подробнее<i class="arrow-black"></i></a>
+            <a href="javascript:void(0)" class="l-link__sl js-tab__link-hero">Подробнее<i class="arrow-black"></i></a>
+          </article>
+          <article class="l-item">
+            <img src="img/face.png" alt="">
+            <h1>Павел Рудминас #2</h1>
+            <p>От помощника машиниста буровой установки до руководителя производственно-технического отдела буровой
+              компании</p>
+            <a href="javascript:void(0)" class="l-link__sl js-tab__link-hero">Подробнее<i class="arrow-black"></i></a>
           </article>
         </div>
       </div>
@@ -48,19 +55,20 @@
 
     <section class="ar-section">
       <!-- TYT -->
-      <div class="l-group__item-detail">
+      <div class="l-group__item-detail js-tab__content-hero">
         <div class="l-group__item-top">
           <div class="l-wrapper">
             <div class="l-hero">
-              <img src="./img/face.png" alt="">
+              <img src="img/face.png" alt="">
               <div class="l-hero-name">
-                <h3>Павел Рудминас</h3>
+                <h3>Павел Рудминас #1</h3>
                 <p>от помощника машиниста буровой установки
                   до руководителя производственно-технического отдела буровой компании
                 </p>
               </div>
 
-              <a href="#" class="c-close-btn"><i class="close"></i></a>
+              <a href="javascript:void(0)" onclick="hideTabContent()" class="c-close-btn js-close"><i
+                  class="close"></i></a>
             </div>
           </div>
         </div>
@@ -101,6 +109,100 @@
           </div>
         </div>
       </div>
+      <div class="l-group__item-detail js-tab__content-hero">
+        <div class="l-group__item-top">
+          <div class="l-wrapper">
+            <div class="l-hero">
+              <img src="img/face.png" alt="">
+              <div class="l-hero-name">
+                <h3>Павел Рудминас #2</h3>
+                <p>от помощника машиниста буровой установки
+                  до руководителя производственно-технического отдела буровой компании
+                </p>
+              </div>
+
+              <a href="javascript:void(0)" onclick="hideTabContent()" class="c-close-btn js-close"><i
+                  class="close"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="l-group__item-bottom">
+          <div class="l-wrapper">
+            <div class="l-hero-list">
+              <ul>
+                <li>
+                  <span> О карьерном пути:</span>
+                  <p>В 2010 году я окончил Иркутский государственный технический университет по специальности «Техника и
+                    технология разведки месторождений полезных ископаемых».
+
+                    В том же году приехал в Мирный по совету одногруппников, которые проходили здесь до этого практику.
+
+                    С тех пор работаю в группе АЛРОСА. Начинал помощником машиниста буровой установки, а спустя год,
+                    вернувшись после срочной службы в ВС РФ, устроился в Ботуобинскую геологоразведочную экспедицию
+                    буровым мастером 2-й категории. В 2014-2017 гг. работал начальником участка инженерных изысканий
+                    института «Якутнипроалмаз», затем – главным инженером Западно-Якутской геологоразведочной партии
+                    Мирнинской геологоразведочной экспедиции.
+
+                    С 2019 года занимаю должность начальника производственно-технического отдела «АЛРОСА-Спецбурение» -
+                    организации, которая занимается различными видами горно-буровых работ.
+                  </p>
+                </li>
+                <li>
+                  <span> О профессии:</span>
+                  <p>
+                    Трудолюбие, ответственность, целеустремленность, коммуникабельность. Необходимо знать специфику
+                    деятельности геологоразведочных предприятий, особенности и тонкости производства горно-буровых
+                    работ. Если любите свое дело, обязательно добьетесь успеха в профессии.
+
+                    Как говорил Конфуций, «найдите работу, в которую влюбитесь, и вам больше не придётся трудиться ни
+                    одного дня в жизни». Я считаю, что нашел такую работу.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        // tab sl
+        const tabs = document.querySelectorAll(".js-tab__link-hero"),
+          tabsContent = document.querySelectorAll(".js-tab__content-hero"),
+          tabsParrent = document.querySelector(".js-tab__parent-hero");
+
+        function hideTabContent() {
+          tabsContent.forEach((item) => {
+            item.classList.add("hide-hero");
+            item.classList.remove("show-hero", "fade-hero");
+          });
+
+          tabs.forEach((item) => {
+            item.classList.remove("active");
+          });
+        }
+
+        function showTabContent(i = 0) {
+          tabsContent[i].classList.add("show-hero", "fade-hero");
+          tabsContent[i].classList.remove("hide-hero");
+          tabs[i].classList.add("active");
+          tabsContent[i].scrollIntoView({ behavior: "smooth" });
+        }
+
+        hideTabContent();
+        showTabContent();
+
+        tabsParrent.addEventListener("click", (event) => {
+          const target = event.target;
+
+          if (target && target.classList.contains("js-tab__link-hero")) {
+            tabs.forEach((item, i) => {
+              if (target == item) {
+                hideTabContent();
+                showTabContent(i);
+              }
+            });
+          }
+        });
+      </script>
     </section>
   </main>
   <script src="./js/default.js"></script>

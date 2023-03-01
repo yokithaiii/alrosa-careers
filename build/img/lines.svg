@@ -1,1 +1,8 @@
-<svg width="1440" height="126" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 1l399 35 905-33 136 12" stroke="#E2F1F9" stroke-width="2"/><path d="M0 11l391 39 914-36 135 13" stroke="#E2F1F9" stroke-width="2"/><path d="M0 19l373 43 933-40 134 16" stroke="#E2F1F9" stroke-width="2"/><path d="M0 31l362 46 944-43 134 17" stroke="#E2F1F9" stroke-width="2"/><path d="M0 39l350 52 956-48 134 19" stroke="#E2F1F9" stroke-width="2"/><path d="M337 103L0 50v75h1440V75l-135-20-968 48z" fill="#E2F1F9" stroke="#E2F1F9" stroke-width="2"/></svg>
+<svg width="1440" height="126" viewBox="0 0 1440 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 1L399 36L1304 3L1440 15" stroke="#E2F1F9" stroke-width="2"/>
+<path d="M0 11L391 50L1305 14L1440 27" stroke="#E2F1F9" stroke-width="2"/>
+<path d="M0 19L373 62L1306 22L1440 38" stroke="#E2F1F9" stroke-width="2"/>
+<path d="M0 31L362 77L1306 34L1440 51" stroke="#E2F1F9" stroke-width="2"/>
+<path d="M0 39L350 91L1306 43L1440 62" stroke="#E2F1F9" stroke-width="2"/>
+<path d="M337 103L0 50V125H1440V75L1305 55L337 103Z" fill="#E2F1F9" stroke="#E2F1F9" stroke-width="2"/>
+</svg>

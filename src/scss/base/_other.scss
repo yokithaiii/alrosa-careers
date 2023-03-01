@@ -13,6 +13,13 @@
     color: #000000;
 }
 
+.c-tb-24 {
+    font-weight: 450;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+}
+
 .c-tb-20 {
     font-style: normal;
     font-weight: 400;
@@ -25,6 +32,12 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 27px;
+    color: #000000;
+}
+.c-tb-16 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
     color: #000000;
 }
 
@@ -43,6 +56,7 @@
     background-size: cover;
     background-position: 50%;
     z-index: -1;
+    background-image: url("../img/banner.png");
 }
 
 .l-banner-container {
@@ -54,9 +68,9 @@
     max-width: 1440px;
 }
 
-.ar-section-title h1 {
+.l-title-q h1 {
     font-weight: 450;
-    font-size: 50px;
+    font-size: clamp(38px, 10vw, 50px) !important;
     line-height: 61px;
     letter-spacing: 15px;
     text-transform: uppercase;
@@ -146,12 +160,13 @@
 .l-why-alrosa__grid::after {
     content: "";
     position: absolute;
-    right: 0;
-    bottom: 0;
-    background-image: url("/img/almaz.png");
+    right: 102px;
+    bottom: -20px;
+    background-image: url("../img/almaz.jpg");
     background-position: 50%;
     width: 252px;
     height: 232px;
+    z-index: -1;
 }
 
 .l-map-section {
@@ -162,6 +177,8 @@
     position: absolute;
     width: 100%;
     /* background: ; */
+    z-index: 10;
+    white-space: nowrap;
 }
 
 .l-map-numbers__value {
@@ -186,11 +203,79 @@
 }
 
 .l-map-content {
-    height: 925px;
-    background-image: url("/img/4.svg");
+    height: clamp(320px, 64vw, 925px);
+    background-image: url("../img/map.svg");
     background-position: 50%;
-    width: 100%;
+    width: 100% !important;
+    min-width: 320px;
+    max-width: 1440px;
     background-size: contain;
+    position: relative;
+    margin: 0 auto;
+}
+.l-map-content img {
+    position: absolute;
+}
+
+.l-map-text span:first-child {
+    font-weight: 450;
+    font-size: 48px;
+    line-height: 59px;
+    color: #000000;
+}
+.l-map-text span:last-child {
+    font-weight: 450;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+}
+.l-map-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    position: absolute;
+    max-width: 255px;
+}
+.l-map-text.first {
+    right: 58.5%;
+    bottom: 40%;
+}
+.l-map-text.second {
+    right: 58.5%;
+    bottom: 26%;
+}
+.l-map-text.last {
+    right: 24.5%;
+    bottom: 12%;
+}
+
+.l-map_dot {
+    position: absolute;
+
+    font-weight: 450;
+    font-size: 16px;
+    line-height: 50px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+
+.l-map_dot::before {
+    content: "";
+    background: url("data:image/svg+xml,%3Csvg width='28' height='34' viewBox='0 0 28 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.7145 2.53271L26.3809 9.82421V24.4072L14.7145 31.6987L1.58984 24.4072V9.82421L14.7145 2.53271Z' stroke='%23CC0404' stroke-width='2.9166' stroke-linecap='square'/%3E%3C/svg%3E%0A")
+        no-repeat center/cover;
+    width: 25px;
+    height: 30px;
+    position: absolute;
+    left: -29px;
+}
+
+.msk::before {
+    background: url("data:image/svg+xml,%3Csvg width='40' height='49' viewBox='0 0 40 49' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M20.6991 2.58594L38.1987 12.794V34.6685L20.6991 46.3349L1.74121 34.6685V12.794L20.6991 2.58594Z' fill='%23CC0404'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M20.6991 2.58594L38.1987 12.794V34.6685L20.6991 46.3349L1.74121 34.6685V12.794L20.6991 2.58594Z' stroke='%23CC0404' stroke-width='2.9166' stroke-linecap='square'/%3E%3C/svg%3E%0A")
+        no-repeat center/cover;
+    width: 37px;
+    height: 43px;
+    left: -40px;
 }
 
 .l-title-section h2 {
@@ -409,12 +494,13 @@
 }
 .l-group-grid .l-item {
     max-width: 373px;
+    height: max-content;
 }
 
 .l-group-grid .l-item img {
     width: 100%;
     max-height: 373px;
-    height: 100%;
+    height: 373px;
 }
 
 .l-group-grid .l-item h1 {
@@ -433,6 +519,10 @@
     font-size: 18px;
     line-height: 28px;
     color: #000000;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
 
 .l-link__sl {
@@ -463,6 +553,7 @@
     width: 273px;
     height: 360px;
     display: block;
+    object-fit: cover;
 }
 
 .l-hero .c-close-btn {
@@ -476,6 +567,18 @@
 }
 .l-hero-name h3 {
     margin-bottom: 20px;
+    font-weight: 450;
+    font-size: 22px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.l-hero-name p {
+    font-weight: 450;
+    font-size: 15px;
+    line-height: 20px;
+    color: #7b8284;
+    max-width: 552px;
 }
 
 .l-group__item-bottom {
@@ -485,10 +588,10 @@
 .l-group__item-bottom::before {
     content: " ";
     position: absolute;
-    top: -124px;
+    top: -122px;
     right: 0;
     left: 0;
-    background-image: url("/img/lines.svg");
+    background-image: url("../img/lines.svg");
     background-size: cover;
     background-position: 50% 0;
     height: 124px;
@@ -496,6 +599,8 @@
 }
 .l-hero-list {
     padding-left: 297px;
+    padding-right: 80px;
+    padding-top: 15px;
 }
 .l-hero-list ul li {
     margin-bottom: 36px;
@@ -518,4 +623,447 @@
     font-size: 16px;
     line-height: 30px;
     color: #000000;
+}
+
+.show-hero {
+    display: block;
+}
+.hide-hero {
+    display: none;
+}
+.fade-hero {
+    animation-name: fade; /* Добавляем Анимацию с именем fade */
+    animation-duration: 1.5s; /* Продолжительность Анимации 1.5 секунды */
+}
+@keyframes fade {
+    /* Эффект для Анимации с именем fade */
+    from {
+        opacity: 0.1; /* ... от прозрачности 0,1 */
+    }
+    to {
+        opacity: 1; /* ... до прозрачности 1 */
+    }
+}
+
+.l-why-alrosa .l-mob-container {
+    display: none;
+}
+.m-show-768 {
+    display: none;
+}
+.mob-show__map-bg {
+    display: none;
+}
+.l-map-text__mobile {
+    display: none;
+}
+
+@media screen and (max-width: 1350px) {
+    .l-map-text.first {
+        right: 58.5%;
+        bottom: 31%;
+    }
+    .l-map-text.second {
+        right: 58.5%;
+        bottom: 4%;
+    }
+    .l-map-text.last {
+        right: 18.5%;
+        bottom: 2%;
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    .l-wrapper,
+    .l-banner-container {
+        padding: 0 100px;
+    }
+    .l-map_dot {
+        color: transparent;
+    }
+    .l-our-command {
+        padding: 24px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .l-wrapper,
+    .l-banner-container {
+        padding: 0 70px;
+    }
+
+    .l-why-alrosa__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .l-why-alrosa__grid::after {
+        right: 30px;
+    }
+    .l-possible-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .l-possible-grid .l-item {
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 910px) {
+    .l-wrapper,
+    .l-banner-container {
+        padding: 0 40px;
+    }
+    .l-banner-default {
+        height: 420px;
+    }
+    .l-map-numbers__value .count,
+    .l-map-numbers__value .count span {
+        font-size: 50px;
+        line-height: 50px;
+    }
+    .l-group-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px 16px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .l-hero-list {
+        padding: 15px 0;
+    }
+    .l-spreading-nav__wrapper {
+        flex-direction: column;
+    }
+    .l-map_dot {
+        color: transparent;
+        display: none;
+    }
+    .l-map_dot.msk {
+        display: flex !important;
+
+        left: 19% !important;
+        top: 42.5% !important;
+    }
+    .l-map_dot.msk::before {
+        width: 30px;
+        height: 37px;
+    }
+
+    .l-map-numbers__value .value:last-child {
+        display: none;
+    }
+    .m-show-768 {
+        display: block;
+        font-weight: 450;
+        font-size: 18px;
+        line-height: 22px;
+        color: #000000;
+        position: relative;
+    }
+    .m-show-768::after {
+        content: "";
+        border-top: 1px solid #cc0404;
+        position: absolute;
+        width: 40px;
+        left: 0;
+        top: -5px;
+    }
+    .l-map-text {
+        display: none;
+    }
+
+    .l-map-text__mobile {
+        display: block;
+    }
+    .l-map-text__mobile .l-map-text {
+        display: flex !important;
+    }
+    .l-map-text__mobile .l-map-text.second {
+        right: 40%;
+    }
+    .l-possible-grid .l-item {
+        height: 380px;
+        padding: 20px;
+    }
+    .l-possible-grid .l-item h2 {
+        font-size: 24px;
+        line-height: 32px;
+        transform: translateY(182px);
+    }
+    .l-possible-grid .l-item p {
+        font-size: 16px;
+        line-height: 24px;
+        -webkit-line-clamp: 7;
+    }
+    .l-possible-grid .l-item:hover .l-item__link {
+        transform: translateX(-156px);
+    }
+    .l-possible-grid .l-item:hover h2 {
+        transform: translateY(0);
+    }
+    .l-possible-grid .l-item .l-item__title {
+        padding-bottom: 19px;
+    }
+    .l-found-content {
+        grid-template-columns: 1fr;
+    }
+    .l-found-content .l-found-right {
+        order: -1;
+
+        margin-bottom: 34px;
+        position: relative;
+        padding: 24px 0 0 0;
+    }
+    .l-found-content .l-found-right::before {
+        content: "";
+        height: 100%;
+        width: 100vw;
+        position: absolute;
+        background-color: #e2f3f8;
+        top: 0;
+        right: 0;
+        left: -40px;
+        bottom: 0;
+        border-bottom: 2px solid #cc0404;
+    }
+    .l-found-face img {
+        bottom: 2px;
+        left: 0;
+    }
+}
+@media screen and (max-width: 600px) {
+    .l-wrapper,
+    .l-banner-container {
+        padding: 0 24px;
+    }
+    .l-title-q h1 {
+        font-weight: 450;
+        font-size: 36px !important;
+        line-height: 44px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+    .l-found-content .l-found-right::before {
+        left: -24px;
+    }
+    .l-group-grid .l-item img {
+        height: 280px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .l-possible-grid {
+        grid-template-columns: 1fr;
+    }
+    .l-possible-grid .l-item {
+        height: 450px;
+    }
+    .l-why-alrosa__grid {
+        grid-template-columns: 1fr;
+    }
+    .l-why-alrosa .l-mob-container {
+        display: block;
+        padding-bottom: 273px;
+    }
+    .l-why-alrosa__grid::after {
+        top: -266px;
+        right: unset;
+        left: unset;
+    }
+    .m-text {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 27px;
+        color: #000000;
+        padding-top: 24px;
+    }
+    .c-mt-100 {
+        margin-top: unset;
+    }
+    .ar-spreading-nav__right {
+        padding-bottom: 60px;
+    }
+    .mob-show__map-bg {
+        display: block;
+    }
+    .mob-show__map-bg img:first-child {
+        bottom: 0;
+        right: 58%;
+    }
+    .mob-show__map-bg img:last-child {
+        bottom: 0;
+        right: 0;
+    }
+    .l-map-text span:first-child,
+    .l-map-text span:last-child {
+        font-weight: 450;
+        font-size: 30px;
+        line-height: 37px;
+        color: #000000;
+    }
+    .l-map-numbers__value .count,
+    .l-map-numbers__value .count span {
+        font-weight: 450;
+        font-size: 30px;
+        line-height: 37px;
+        color: #000000;
+    }
+    .l-map-numbers__value .value span {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000000;
+    }
+    .l-map-text.first {
+        right: 40%;
+    }
+    .l-map-text__mobile .l-map-text.second {
+        right: 21%;
+    }
+    .l-group__item-top {
+        padding-bottom: 120px;
+    }
+    .l-hero {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .l-banner-bg {
+        background-image: url("../img/bg-mob.png");
+    }
+    .l-title-q h1 {
+        position: relative;
+        top: -30px;
+    }
+    .l-banner-descr * {
+        max-width: 70%;
+    }
+    .l-banner-default {
+        height: 365px;
+    }
+    .l-title-q h2 {
+        font-weight: 450;
+        font-size: 24px;
+        line-height: 29px;
+        color: #000000;
+    }
+    .l-map-text span:first-child,
+    .l-map-text span:last-child {
+        font-size: 30px;
+        line-height: 37px;
+    }
+    .l-map-text span:first-child,
+    .l-map-text span:last-child {
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .m-show-768 {
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .l-map_dot.msk::before {
+        width: 15px;
+        height: 18px;
+    }
+    .l-map_dot.msk {
+        left: 23% !important;
+        top: 40.5% !important;
+    }
+    .mob-show__map-bg img:first-child {
+        right: 40%;
+    }
+    .l-map-text__mobile .l-map-text.second {
+        right: 25%;
+        bottom: 13%;
+    }
+    .l-why-alrosa__grid {
+        gap: unset;
+    }
+    .l-why-alrosa__grid .l-item {
+        margin-bottom: 24px;
+    }
+    .l-why-alrosa__grid .l-item:last-child {
+        margin-bottom: unset;
+    }
+    .l-title-q h2 {
+        font-size: 24px;
+        line-height: 29px;
+        text-transform: inherit;
+    }
+    .c-tb-18 {
+        font-size: 16px;
+        line-height: 27px;
+    }
+    .l-found-face figcaption .descr {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .l-found-face img {
+        width: 176px;
+        height: 167px;
+        left: unset;
+        right: 0;
+    }
+    .l-found-face .name {
+        max-width: 70%;
+    }
+    .l-found-face {
+        padding-bottom: 80px;
+    }
+    .l-found-left {
+        display: flex;
+        flex-direction: column;
+    }
+    .l-our-command {
+        order: -1;
+        padding: unset;
+        background: unset;
+        gap: 24px;
+        margin-bottom: 32px;
+    }
+    .c-title-40 {
+        font-size: 24px;
+        line-height: 29px;
+    }
+    .l-our-command p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .l-group-grid .l-item img {
+        height: 170px;
+    }
+    .l-group-grid .l-item h1 {
+        font-size: 18px;
+        line-height: 22px;
+        padding: 12px 0;
+    }
+    .l-group-grid .l-item p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .l-link__sl {
+        font-size: 14px;
+        line-height: 36px;
+        padding-top: 16px;
+    }
+    .l-group-grid {
+        padding-top: 24px;
+    }
+    .l-hero-list ul li span {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .l-hero img {
+        margin-top: 30px;
+        height: 450px;
+        width: 100%;
+    }
+    .l-hero .c-close-btn {
+        top: 497px;
+    }
+}
+@media screen and (max-width: 340px) {
+    .l-map_dot.msk {
+        right: 26% !important;
+    }
+    .l-title-section h2 {
+        margin-bottom: 24px;
+    }
 }
